@@ -1,0 +1,24 @@
+{
+  "name": "js-md5checksum-example",
+  "version": "1.0.0",
+  "description": "An example for calculation of md5 checksum in browser JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minodisk/js-md5checksum-example.git"
+  },
+  "author": "minodisk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minodisk/js-md5checksum-example/issues"
+  },
+  "homepage": "https://github.com/minodisk/js-md5checksum-example#readme",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "webpack": "^1.12.0"
+  },
+  "dependencies": {}
+}
