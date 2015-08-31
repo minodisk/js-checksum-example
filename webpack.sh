@@ -1,1 +1,1 @@
-./node_modules/webpack/bin/webpack.js ./src/main.js ./dist/bundle.webpack.js
+./node_modules/webpack/bin/webpack.js ./src/webpack.js ./dist/bundle.webpack.js
