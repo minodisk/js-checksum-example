@@ -44,30 +44,34 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var crypto = __webpack_require__(1);
-
-	var $input = document.querySelector('input[type=file]');
-	var $base64 = document.querySelector('#base64');
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var crypto = __webpack_require__(1)
+	var $input = document.querySelector('input[type=file]')
+	var algorithms = ['md5', 'sha1', 'sha256', 'sha512']
+	var encodings = ['hex', 'binary', 'base64']
 
 	$input.addEventListener('change', function () {
-	  var file = $input.files[0];
-	  if (!file) return;
+	  var file = $input.files[0]
+	  if (file == null) return
 
-	  var r = new FileReader();
+	  var r = new window.FileReader()
 	  r.onerror = function (err) {
-	    console.error(err);
-	  };
+	    console.error(err)
+	  }
 	  r.onload = function () {
-	    var buf = r.result;
-	    console.log(buf);
-	    var hash = crypto.createHash('md5');
-	    hash.update(buf);
-	    $base64.textContent = hash.digest('base64');
-	  };
-	  r.readAsArrayBuffer(file);
+	    var ab = r.result
+	    algorithms.forEach(function (algorithm) {
+	      encodings.forEach(function (encoding) {
+	        var hash = crypto.createHash(algorithm)
+	        hash.update(new Buffer(ab))
+	        var $el = document.querySelector('.webpack .' + algorithm + ' .' + encoding)
+	        $el.textContent = hash.digest(encoding)
+	      })
+	    })
+	  }
+	  r.readAsArrayBuffer(file)
+	}, false)
 
-	}, false);
-
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2).Buffer))
 
 /***/ },
 /* 1 */

@@ -2,13 +2,98 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <style>
+      table {
+        width: 100%;
+        table-layout: fixed;
+      }
+      td {
+        word-wrap: break-word;
+      }
+    </style>
   </head>
   <body>
+    <h1>Checksum with JavaScript</h1>
     <input type="file">
-    <ul>
-      <li>MD5 (base64): <span id="base64"></span></li>
-    </ul>
-    <!-- <script src="bundle.browserify.js"></script> -->
+    <section class="webpack">
+      <h2>webpack</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>hex</th>
+            <th>binary</th>
+            <th>base64</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="md5">
+            <th>md5</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+          <tr class="sha1">
+            <th>sha1</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+          <tr class="sha256">
+            <th>sha256</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+          <tr class="sha512">
+            <th>sha512</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="browserify">
+      <h2>browserify</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>hex</th>
+            <th>binary</th>
+            <th>base64</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="md5">
+            <th>md5</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+          <tr class="sha1">
+            <th>sha1</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+          <tr class="sha256">
+            <th>sha256</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+          <tr class="sha512">
+            <th>sha512</th>
+            <td class="hex"></td>
+            <td class="binary"></td>
+            <td class="base64"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <script src="bundle.browserify.js"></script>
     <script src="bundle.webpack.js"></script>
   </body>
 </html>
